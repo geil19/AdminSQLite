@@ -1,5 +1,6 @@
 package com.aplica.andres.adminsqlite;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Administrador extends AppCompatActivity implements View.OnClickListener {
+public class Administrador extends Activity implements View.OnClickListener {
 
 public void procesarEvento(int opc){
 

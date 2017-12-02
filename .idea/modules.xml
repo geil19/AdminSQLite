@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AdminSQLite.iml" filepath="$PROJECT_DIR$/AdminSQLite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AdminSQLite.iml" filepath="$PROJECT_DIR$/.idea/AdminSQLite.iml" />
+      <module fileurl="file://C:\Users\byron\AdminSQLite\AdminSQLite.iml" filepath="C:\Users\byron\AdminSQLite\AdminSQLite.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
