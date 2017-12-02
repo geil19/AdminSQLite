@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AdminSQLite</string>
+    <string name="numero_celular">NUMERO CELULAR</string>
 </resources>

@@ -1,39 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.aplica.andres.adminsqlite.Registro">
-
-    <ImageView
-        android:id="@+id/imageView2"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="@drawable/centrotic" />
-
+        android:text="REGISTRO"
+        android:textSize="16dp"
+        android:textColor="#ffffff"
+        android:layout_gravity="center" />
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="200dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/regis" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/imageView2"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="30dp"
-        android:text="CODIGO" />
-
-
+        android:layout_marginTop="15dp"
+        android:text="CÓDIGO" />
     <EditText
         android:id="@+id/codigo"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView3"
-        android:layout_below="@+id/textView"
         android:ems="10"
         android:inputType="phone" />
-
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
@@ -42,60 +40,45 @@
         android:layout_below="@+id/codigo"
         android:layout_marginTop="14dp"
         android:text="NOMBRE" />
-
     <EditText
         android:id="@+id/nombre"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/codigo"
         android:layout_below="@+id/textView3"
         android:ems="10"
         android:inputType="textPersonName" />
-
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/nombre"
-        android:layout_below="@+id/nombre"
-        android:text="CONTRASEÃ‘A" />
-
+        android:text="CONTRASEÑA" />
     <EditText
         android:id="@+id/contrasena"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView4"
-        android:layout_below="@+id/textView4"
         android:ems="10"
         android:inputType="textPersonName" />
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/contrasena"
-        android:layout_below="@+id/contrasena"
         android:text="CELULAR" />
-
     <EditText
         android:id="@+id/celular"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/textView5"
-        android:layout_below="@+id/textView5"
         android:ems="10"
-        android:inputType="phone" />
-
+        android:inputType="phone"
+        tools:ignore="HardcodedText" />
     <Button
         android:id="@+id/registrar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/celular"
-        android:layout_marginEnd="21dp"
-        android:text="REGISTRAR"
+        android:layout_marginTop="35dp"
+        android:text="REGISTRARME"
+        android:textSize="18dp"
+        android:background="#17A589"
         android:onClick="alta"/>
-
-
-</RelativeLayout>
+</LinearLayout>
 

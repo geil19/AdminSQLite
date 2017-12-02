@@ -8,7 +8,7 @@
         android:label="Centro TIC"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.Holo.NoActionBar">
+        android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
             android:name=".SplashScreen"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
@@ -17,7 +17,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login" />
+        <activity android:name=".Login"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+            />
         <activity android:name=".Administrador" />
         <activity android:name=".Equipos" />
         <activity android:name=".Registro" />
