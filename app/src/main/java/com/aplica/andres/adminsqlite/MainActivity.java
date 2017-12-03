@@ -97,4 +97,6 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "No existe equipo",Toast.LENGTH_SHORT).show();
     }
  /* fin del programa */
+
+
 }

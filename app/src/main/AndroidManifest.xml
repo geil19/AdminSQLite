@@ -14,17 +14,21 @@
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Login"
-        android:theme="@style/Theme.AppCompat.NoActionBar"
-            />
+        <activity
+            android:name=".Login"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Administrador" />
         <activity android:name=".Equipos" />
         <activity android:name=".Registro" />
-        <activity android:name=".Estudiante" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Estudiante"
+            android:label="@string/title_activity_estudiante"
+            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>

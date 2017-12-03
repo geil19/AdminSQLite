@@ -5,22 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     >
+    <TextView
+        android:id="@+id/titulolog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INICIO DE SESIÓN"
+        android:textColor="#ffffff"
+        android:layout_centerHorizontal="true"
+        android:textSize="17dp"/>
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@id/titulolog"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:src="@drawable/lofi" />
+        android:layout_marginTop="20dp"
+        android:src="@drawable/lofi"/>
     <EditText
         android:id="@+id/txtusuario"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_below="@+id/imageView"
         android:hint="Nombre de Usuario"
-        android:layout_marginTop="30dp"
-        android:inputType="textPersonName" />
+        android:layout_marginTop="15dp"
+        android:inputType="textPersonName"/>
 
     <EditText
         android:id="@+id/txtcontrasena"
@@ -28,14 +36,21 @@
         android:layout_height="50dp"
         android:layout_below="@id/txtusuario"
         android:hint="Contraseña"
-        android:layout_marginTop="20dp"
-        android:inputType="textPassword" />
+        android:layout_marginTop="17dp"
+        android:inputType="textPassword"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="¿Has Olvidado tu Contraseña?"
+        android:layout_below="@+id/txtcontrasena"
+        android:textSize="14dp"
+        android:layout_marginTop="4dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_below="@id/txtcontrasena"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="92dp"
         >
         <Button
             android:id="@+id/login"
@@ -43,15 +58,13 @@
             android:layout_height="50dp"
             android:background="#17A589"
             android:text="INCIAR SESIÓN"
-            android:textSize="18dp"
-            />
+            android:textSize="18dp"/>
         <Button
             android:id="@+id/registro"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="42dp"
             android:background="#188c74"
-            android:text="Registrarse"
-            />
+            android:text="Registrarse"/>
         </LinearLayout>
 </RelativeLayout>
 
