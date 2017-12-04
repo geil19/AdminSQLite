@@ -23,11 +23,13 @@ public class Login extends Activity implements View.OnClickListener{
             {
                 Intent nuevoform = new Intent(Login.this,Administrador.class);
                 startActivity(nuevoform);
+                Toast.makeText(this,"Inició en Modo Administrador", Toast.LENGTH_SHORT).show();
             }
                 else if (usuario.equals("estudiante")&&contrasena.equals("estudiante"))
             {
                 Intent nuevoform = new Intent(Login.this,Estudiante.class);
                 startActivity(nuevoform);
+                Toast.makeText(this,"Inició Sesión Como Estudiante", Toast.LENGTH_SHORT).show();
             }
                 else
             {

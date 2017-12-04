@@ -27,7 +27,7 @@ public class MainActivity extends Activity {
     }
     public void alta(View v) {
 
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Codigo= et1.getText().toString();
         String Nombre = et2.getText().toString();
@@ -47,7 +47,7 @@ public class MainActivity extends Activity {
         Toast.makeText(this, "Datos del equipo cargados", Toast.LENGTH_SHORT).show();
     }
     public void consulta(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Codigo = et1.getText().toString();
         Cursor fila = bd.rawQuery(
@@ -64,7 +64,7 @@ public class MainActivity extends Activity {
     }
     /* Método para eliminar usuarios*/
     public void baja(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Codigo = et1.getText().toString();
         //Elimina el usuario de la base de datos
@@ -77,7 +77,7 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "No existe equipo",Toast.LENGTH_SHORT).show();
     }
     public void modificacion(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Codigo = et1.getText().toString();
         String Nombre = et2.getText().toString();

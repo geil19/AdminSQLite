@@ -1,7 +1,11 @@
 package com.aplica.andres.adminsqlite;
 
+import android.app.AlertDialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -64,6 +68,7 @@ public class Estudiante extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Mensaje();
             return true;
         }
 
@@ -75,18 +80,19 @@ public class Estudiante extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation view item clicks here.
         int id = item.getItemId();
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
+            fragmentManager.beginTransaction().replace(R.id.contenedor, new FragHome()).commit();
+        } else if (id == R.id.nav_perfil) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Frag_Perfil()).commit();
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_hist) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Frag_Historial()).commit();
-        } else if (id == R.id.nav_slideshow) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new FragHome()).commit();
-        } else if (id == R.id.nav_manage) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new FragHome()).commit();
+        } else if (id == R.id.nav_horario) {
+            Intent broswerIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/uc?export=download&id=1yurvsuXxo0bp5OjzeCOJ-vC0n012nJ3N"));
+            startActivity(broswerIntent);
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.out_sesion) {
+            Mensaje();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -102,5 +108,25 @@ public class Estudiante extends AppCompatActivity
                 fragmentTransaction.replace(R.id.contenedor,inboxFragHome);
                 fragmentTransaction.commit();
         }
+    }
+    public void Mensaje(){
+        AlertDialog a1;
+        a1= new AlertDialog.Builder(this).create();
+        a1.setTitle("Cerrar Sesión");
+        a1.setMessage("¿Esta Seguro que Desea Salir?");
+        a1.setButton("ACEPTAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent nuevoform = new Intent(Estudiante.this,Login.class);
+                startActivity(nuevoform);
+            }
+        });
+        a1.setButton2("CANCELAR", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+
+            }
+        });
+        a1.show();
     }
 }

@@ -11,17 +11,19 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class AdminSQLite extends SQLiteOpenHelper {
-    public AdminSQLite(Context context, String nombre, SQLiteDatabase.CursorFactory factory, int version) {
+public class DbHelper extends SQLiteOpenHelper {
+    private static final String DB_NAME="centroTic.sqlite";
+    private static final int DB_SCHEME_VERSION=1;
+
+    public DbHelper(Context context, String nombre, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, nombre, factory, version);
     }
     @Override
     public void onCreate(SQLiteDatabase db) {
         //aquÃ­ creamos la tabla de usuario (dni, nombre, ciudad, numero)
         //db.execSQL("create table equipo(id varchar(20) primary key, estado text, sede text, sala integer)");
-
-        db.execSQL("CREATE TABLE login ( codigo_es TEXT NOT NULL , contrasenna TEXT NOT NULL , PRIMARY KEY(codigo_es))");
-        db.execSQL("CREATE TABLE estudiante ( codigo TEXT , nombre TEXT NOT NULL , telefono TEXT NOT NULL , FOREIGN KEY (codigo) REFERENCES login(codigo_es), PRIMARY KEY(codigo))");
+        db.execSQL("CREATE TABLE estudiante ( codigo TEXT , nombre TEXT NOT NULL , telefono TEXT NOT NULL )");
+        db.execSQL("CREATE TABLE login ( codigo_es TEXT NOT NULL , contrasenna TEXT NOT NULL,FOREIGN KEY (codigo) REFERENCES estudiante(codigo) , PRIMARY KEY (codigo) ) ");
         db.execSQL("CREATE TABLE prestamo ( cod_prestamo INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT , f_ingreso TEXT NOT NULL , f_salida TEXT NOT NULL )");
         db.execSQL("CREATE TABLE equipos ( serial NUMERIC NOT NULL , marca TEXT NOT NULL , estado TEXT NOT NULL , internet TEXT NOT NULL , PRIMARY KEY(serial))");
         db.execSQL("CREATE TABLE sala ( aula INTEGER NOT NULL , equipamiento TEXT NOT NULL , PRIMARY KEY(aula))");
@@ -41,5 +43,11 @@ public class AdminSQLite extends SQLiteOpenHelper {
         db.execSQL("CREATE TABLE equipos ( serial NUMERIC NOT NULL , marca TEXT NOT NULL , estado TEXT NOT NULL , internet TEXT NOT NULL , PRIMARY KEY(serial))");
         db.execSQL("CREATE TABLE sala ( aula INTEGER NOT NULL , equipamiento TEXT NOT NULL , PRIMARY KEY(aula))");
 
+    }
+    public void Abrir(){
+        this.getWritableDatabase();
+    }
+    public void cerrar(){
+        this.close();
     }
 }

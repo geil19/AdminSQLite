@@ -1,5 +1,6 @@
 package com.aplica.andres.adminsqlite;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -31,7 +32,7 @@ public class Registro extends Activity {
 
     public void alta(View v) {
 
-        AdminSQLite admin = new AdminSQLite(this,"prueba12", null, 1);
+        DbHelper admin = new DbHelper(this,"prueba12", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String codigo_es= et1.getText().toString();
         String contrasenna= et3.getText().toString();
@@ -51,6 +52,8 @@ public class Registro extends Activity {
         bd.close();
         //Ponemos los campos a vacÃ­o para insertar el siguiente usuario
         et1.setText(""); et3.setText("");
-        Toast.makeText(this, "Datos del equipo cargados", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Usuario Registrado", Toast.LENGTH_SHORT).show();
+        Intent nuevoform = new Intent(Registro.this,Login.class);
+        startActivity(nuevoform);
     }
 }

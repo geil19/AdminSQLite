@@ -33,7 +33,7 @@ private EditText et5,et6,et7,et8;
     }
     public void alta(View v) {
 
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial= et5.getText().toString();
         String Marca = et6.getText().toString();
@@ -53,7 +53,7 @@ private EditText et5,et6,et7,et8;
         Toast.makeText(this, "Datos del equipo cargados", Toast.LENGTH_SHORT).show();
     }
     public void consulta(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial = et5.getText().toString();
         Cursor fila = bd.rawQuery(
@@ -70,7 +70,7 @@ private EditText et5,et6,et7,et8;
     }
     /* Método para eliminar usuarios*/
     public void baja(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial = et5.getText().toString();
         //Elimina el usuario de la base de datos
@@ -83,7 +83,7 @@ private EditText et5,et6,et7,et8;
             Toast.makeText(this, "No existe equipo",Toast.LENGTH_SHORT).show();
     }
     public void modificacion(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        DbHelper admin = new DbHelper(this,"admins", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial = et5.getText().toString();
         String Marca = et6.getText().toString();
