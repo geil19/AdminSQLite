@@ -19,6 +19,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class FragHome extends Fragment {
+    String m;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         new Handler().postDelayed(new Runnable() {

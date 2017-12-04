@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_marginTop="60dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="32dp"
         >
         <LinearLayout
             android:layout_width="wrap_content"
@@ -25,6 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Mi Perfil"
+                android:textStyle="bold"
                 android:textColor="#ffffff"
                 android:textSize="45dp"/>
         </LinearLayout>
@@ -73,12 +74,14 @@
         android:orientation="vertical"
         >
         <TextView
+            android:id="@+id/perf_nombest"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
-            android:hint="CODIGO"
+            android:hint="NOMB_EST"
             android:textSize="18dp"
             />
         <EditText
+            android:id="@+id/perf_mail"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
@@ -86,6 +89,7 @@
             android:textSize="18dp"
             />
         <TextView
+            android:id="@+id/perf_prog"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
@@ -93,6 +97,7 @@
             android:textSize="18dp"
             />
         <TextView
+            android:id="@+id/perf_codest"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="23dp"
@@ -100,6 +105,7 @@
             android:textSize="18dp"
             />
         <EditText
+            android:id="@+id/perf_telf"
             android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -109,13 +115,15 @@
     </LinearLayout>
     </LinearLayout>
     <Button
+        android:id="@+id/perf_btAct"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="140dp"
         android:background="#17A589"
         android:text="ACTUALIZAR"
         android:textSize="18dp"
+        android:onClick="act"
         android:textColor="#ffffff"
         />
 </LinearLayout>

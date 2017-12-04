@@ -2,6 +2,7 @@ package com.aplica.andres.adminsqlite;
 
 import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -13,11 +14,12 @@ import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 public class MainActivity extends Activity {
     private EditText et1, et2, et3, et4;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //FRAG_PERFIL
+
 
         et1 = (EditText) findViewById(R.id.editText1);
         et2 = (EditText) findViewById(R.id.editText2);

@@ -83,7 +83,7 @@ public class Estudiante extends AppCompatActivity
         if (id == R.id.nav_home) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new FragHome()).commit();
         } else if (id == R.id.nav_perfil) {
-            fragmentManager.beginTransaction().replace(R.id.contenedor, new Frag_Perfil()).commit();
+            startActivity(new Intent(Estudiante.this, Frag_Perfil.class));
         } else if (id == R.id.nav_hist) {
             fragmentManager.beginTransaction().replace(R.id.contenedor, new Frag_Historial()).commit();
         } else if (id == R.id.nav_horario) {

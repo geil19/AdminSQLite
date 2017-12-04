@@ -22,6 +22,7 @@
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Administrador" />
+        <activity android:name=".Frag_Perfil" />
         <activity android:name=".Equipos" />
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity" />
