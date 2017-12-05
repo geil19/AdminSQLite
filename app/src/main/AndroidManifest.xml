@@ -21,14 +21,18 @@
         <activity
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
-        <activity android:name=".Administrador" />
+        <activity android:name=".Frag_Perfil" />
         <activity android:name=".Equipos" />
         <activity android:name=".Registro" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".Estudiante"
             android:label="@string/title_activity_estudiante"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Lista" />
+        <activity android:name=".Salas" />
+        <activity android:name=".Prestamo" />
+        <activity android:name=".Administrador"></activity>
     </application>
 
 </manifest>

@@ -71,4 +71,14 @@
             android:layout_marginTop="15dp"/>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/registrarequipo"
+        android:layout_width="match_parent"
+
+        android:background="#188c74"
+        android:text="Registrar Equipo"
+        android:layout_height="42dp"
+        android:onClick="rEquipos"
+        android:textColor="#142b10" />
+
 </LinearLayout>

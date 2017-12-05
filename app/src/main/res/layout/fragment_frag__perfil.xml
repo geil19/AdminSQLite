@@ -1,17 +1,129 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.aplica.andres.adminsqlite.Frag_Perfil"
+    android:orientation="vertical"
     android:background="#1e2939"
     >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp"
+            android:layout_marginLeft="32dp"
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mi Perfil"
+                    android:textStyle="bold"
+                    android:textColor="#ffffff"
+                    android:textSize="45dp"/>
+            </LinearLayout>
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="DATOS PERFIL"
-        android:textSize="55dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Nombre: "
+                android:textSize="25dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Correo: "
+                android:textSize="25dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Programa: "
+                android:textSize="25dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Código: "
+                android:textSize="25dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="Telefono: "
+                android:textSize="25dp"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="165dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/perf_nombest"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:hint="NOMB_EST"
+                android:textSize="18dp"
+                />
+            <EditText
+                android:id="@+id/perf_mail"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:hint="Correo"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:id="@+id/perf_prog"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Prog"
+                android:textSize="18dp"
+                />
+            <TextView
+                android:id="@+id/perf_codest"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:text="Cod"
+                android:textSize="18dp"
+                />
+            <EditText
+                android:id="@+id/perf_telf"
+                android:layout_width="210dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="TEL"
+                android:textSize="16dp"
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:id="@+id/perf_btAct"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="140dp"
+        android:background="#17A589"
+        android:text="ACTUALIZAR"
+        android:textSize="18dp"
+        android:onClick="act"
+        android:textColor="#ffffff"
         />
-
-</FrameLayout>
+</LinearLayout>

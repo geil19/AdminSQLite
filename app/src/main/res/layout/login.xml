@@ -57,6 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#17A589"
+            android:onClick="ingresar"
             android:text="INCIAR SESIÓN"
             android:textSize="18dp"/>
         <Button
@@ -64,6 +65,7 @@
             android:layout_width="match_parent"
             android:layout_height="42dp"
             android:background="#188c74"
+            android:onClick="registradito"
             android:text="Registrarse"/>
         </LinearLayout>
 </RelativeLayout>

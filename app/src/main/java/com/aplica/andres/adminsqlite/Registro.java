@@ -25,24 +25,24 @@ public class Registro extends Activity {
         et1=(EditText) findViewById(R.id.codigo);
         et2=(EditText) findViewById(R.id.nombre);
         et3=(EditText) findViewById(R.id.contrasena);
-        et4=(EditText) findViewById(R.id.celular);
+        et4=(EditText) findViewById(R.id.telefono);
 
     }
 
     public void alta(View v) {
-
-        AdminSQLite admin = new AdminSQLite(this,"prueba12", null, 1);
+        AdminSQLite admin = new AdminSQLite(this, "prueba20", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
-        String codigo_es= et1.getText().toString();
-        String contrasenna= et3.getText().toString();
-        String nombre= et2.getText().toString();
-        String telefono= et4.getText().toString();
+        String codigo_es = et1.getText().toString();
+        String contraseña = et3.getText().toString();
+        String nombre = et2.getText().toString();
+        String telefono = et4.getText().toString();
         ContentValues registro = new ContentValues();
         ContentValues estudio = new ContentValues();
         registro.put("codigo_es", codigo_es);
-        registro.put("contrasenna", contrasenna);
+        registro.put("contraseña", contraseña);
         estudio.put("nombre", nombre);
         estudio.put("telefono", telefono);
+        estudio.put("codigo",codigo_es);
 
 
         //Inserta los datos en la tabla usuario
@@ -50,7 +50,8 @@ public class Registro extends Activity {
         bd.insert("estudiante", null, estudio);
         bd.close();
         //Ponemos los campos a vacÃ­o para insertar el siguiente usuario
-        et1.setText(""); et3.setText("");
+        et1.setText("");
+        et3.setText("");
         Toast.makeText(this, "Datos del equipo cargados", Toast.LENGTH_SHORT).show();
     }
 }

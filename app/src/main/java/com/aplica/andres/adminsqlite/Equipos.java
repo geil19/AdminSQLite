@@ -31,29 +31,31 @@ private EditText et5,et6,et7,et8;
         et8=(EditText) findViewById(R.id.internet);
 
     }
-    public void alta(View v) {
+    public void rEquipos(View v) {
 
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        AdminSQLite admin = new AdminSQLite(this,"prueba20", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
-        String Serial= et5.getText().toString();
-        String Marca = et6.getText().toString();
-        String Estado = et7.getText().toString();
-        String Internet = et8.getText().toString();
+        String valor= et5.getText().toString();
+        int serial= Integer.valueOf(valor);
+
+        String marca = et6.getText().toString();
+        String estado = et7.getText().toString();
+        String internet = et8.getText().toString();
         ContentValues registro = new ContentValues();
-        registro.put("Serial", Serial);
-        registro.put("Marca", Marca);
-        registro.put("Estado", Estado);
-        registro.put("Internet", Internet);
+        registro.put("serial", serial);
+        registro.put("marca", marca);
+        registro.put("estado", estado);
+        registro.put("internet", internet);
 
         //Inserta los datos en la tabla usuario
-        bd.insert("Equipos", null, registro);
+        bd.insert("equipos", null, registro);
         bd.close();
         //Ponemos los campos a vacío para insertar el siguiente usuario
         et5.setText(""); et6.setText(""); et7.setText(""); et8.setText("");
         Toast.makeText(this, "Datos del equipo cargados", Toast.LENGTH_SHORT).show();
     }
     public void consulta(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        AdminSQLite admin = new AdminSQLite(this,"prueba19", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial = et5.getText().toString();
         Cursor fila = bd.rawQuery(
@@ -70,7 +72,7 @@ private EditText et5,et6,et7,et8;
     }
     /* Método para eliminar usuarios*/
     public void baja(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        AdminSQLite admin = new AdminSQLite(this,"prueba19", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial = et5.getText().toString();
         //Elimina el usuario de la base de datos
@@ -83,7 +85,7 @@ private EditText et5,et6,et7,et8;
             Toast.makeText(this, "No existe equipo",Toast.LENGTH_SHORT).show();
     }
     public void modificacion(View v) {
-        AdminSQLite admin = new AdminSQLite(this,"admins", null, 1);
+        AdminSQLite admin = new AdminSQLite(this,"prueba19", null, 1);
         SQLiteDatabase bd = admin.getWritableDatabase();
         String Serial = et5.getText().toString();
         String Marca = et6.getText().toString();
