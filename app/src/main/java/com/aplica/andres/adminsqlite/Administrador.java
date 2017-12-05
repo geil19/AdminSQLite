@@ -2,6 +2,7 @@ package com.aplica.andres.adminsqlite;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,6 +23,13 @@ public void procesarEvento(int opc){
        startActivity(nuevoform2);
        break;
 
+       case R.id.sala:  Intent nuevoform3 = new Intent(Administrador.this,Salas.class);
+            startActivity(nuevoform3);
+            break;
+            case R.id.prest:  Intent nuevoform4 = new Intent(Administrador.this,Prestamo.class);
+            startActivity(nuevoform4);
+            break;
+
     }
 
 }
@@ -34,11 +42,16 @@ public void procesarEvento(int opc){
         botones.setOnClickListener(this);
         Button btn= (Button) findViewById(R.id.equipos);
         btn.setOnClickListener(this);
-
+        Button btn2=(Button)findViewById(R.id.sala);
+        btn2.setOnClickListener(this);
+        Button btn3=(Button)findViewById(R.id.prest);
+        btn3.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
     procesarEvento(view.getId());
     }
+
+
 }

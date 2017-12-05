@@ -104,8 +104,8 @@ public class Estudiante extends AppCompatActivity
         switch (pos){
             case 0:
                 fragmentTransaction= fragmentManager.beginTransaction();
-                FragHome inboxFragHome= new FragHome();
-                fragmentTransaction.replace(R.id.contenedor,inboxFragHome);
+                FragHome inboxFrag_Home= new FragHome();
+                fragmentTransaction.replace(R.id.contenedor,inboxFrag_Home);
                 fragmentTransaction.commit();
         }
     }

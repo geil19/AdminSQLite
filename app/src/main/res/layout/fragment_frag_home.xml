@@ -1,18 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayoutLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.aplica.andres.adminsqlite.FragHome">
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="15dp"
-        android:text="*Seleccione La Sala Donde desea Solicitar el Prestamo del Equipo"
-        android:textColor="#ffffff"
-        />
 
 
-</LinearLayout>
+</RelativeLayoutLayout>

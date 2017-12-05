@@ -29,7 +29,9 @@
         <activity
             android:name=".Estudiante"
             android:label="@string/title_activity_estudiante"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".Salas" />
+        <activity android:name=".Prestamo"></activity>
     </application>
 
 </manifest>
