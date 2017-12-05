@@ -122,11 +122,14 @@ public class MainActivity extends Activity {
             Toast.makeText(this, "No existe equipo",Toast.LENGTH_SHORT).show();
     }
 
+
+
+
     public void reportadito(View view){
         Intent nuevoform3 = new Intent(MainActivity.this,Lista.class);
         startActivity(nuevoform3);
     }
- /* fin del programa */
+
 
 
 }
