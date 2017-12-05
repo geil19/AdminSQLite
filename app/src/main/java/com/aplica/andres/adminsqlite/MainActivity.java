@@ -126,7 +126,7 @@ public class MainActivity extends Activity {
         Intent nuevoform3 = new Intent(MainActivity.this,Lista.class);
         startActivity(nuevoform3);
     }
-
+ /* fin del programa */
 
 
 }
