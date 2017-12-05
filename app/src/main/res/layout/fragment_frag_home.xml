@@ -1,9 +1,165 @@
-<RelativeLayoutLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.aplica.andres.adminsqlite.FragHome">
+    tools:context="com.aplica.andres.adminsqlite.FragHome"
+    android:background="#1e2939"
+    >
+    <TextView
+        android:id="@+id/home_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="SALAS DISPONIBLES"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/home_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_below="@+id/home_titulo"
+        android:text="*Seleccione Una Sala"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnA"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/salaa"
+        android:layout_below="@+id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/home_btnA"
+        android:text="SALA A"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnB"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/salab"
+        android:layout_below="@id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_btnA"
+        android:layout_alignStart="@id/home_btnB"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="SALA B"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnC"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/salac"
+        android:layout_below="@id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_btnA"
+        android:layout_alignStart="@id/home_btnC"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="SALA C"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnD"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/salad"
+        android:layout_below="@+id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/home_btnD"
+        android:text="SALA D"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnE"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/salae"
+        android:layout_below="@+id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_btnD"
+        android:layout_alignStart="@id/home_btnE"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="5dp"
+        android:text="SALA E"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnGc1"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/salagc1"
+        android:layout_below="@+id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtGc1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home_btnD"
+        android:layout_alignStart="@id/home_btnGc1"
+        android:layout_marginLeft="6dp"
+        android:layout_marginTop="5dp"
+        android:text="SALA GC1"
+        android:textSize="17dp"
+        />
+    <Button
+        android:id="@+id/home_btnGc2"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="360dp"
+        android:background="@drawable/salagc2"
+        android:layout_below="@+id/home_titulo"
+        />
+    <TextView
+        android:id="@+id/home_txtGc2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/home_btnGc2"
+        android:text="SALA GC2"
+        android:textSize="17dp"/>
 
-
-</RelativeLayoutLayout>
+</RelativeLayout>
