@@ -94,7 +94,7 @@ public class Estudiante extends AppCompatActivity
         } else if (id == R.id.out_sesion) {
             Mensaje();
         }
-
+//fr
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
