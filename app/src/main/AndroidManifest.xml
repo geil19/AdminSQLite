@@ -31,7 +31,8 @@
             android:label="@string/title_activity_estudiante"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".Salas" />
-        <activity android:name=".Prestamo"></activity>
+        <activity android:name=".Prestamo" />
+        <activity android:name=".Seleccion"></activity>
     </application>
 
 </manifest>
